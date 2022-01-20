@@ -10,6 +10,10 @@ const config = (env, { mode }) => ({
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.(ts|js)x?$/,
         use: ["babel-loader"],
         exclude: /node_modules/,
